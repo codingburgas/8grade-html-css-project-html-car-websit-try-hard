@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Коли под наем</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd;
+            color: #333;
+        }
+
+        header {
+            background-color: #1565c0;
+            padding: 15px 0;
+            text-align: center;
+            color: white;
+        }
+
+        header img {
+            height: 50px;
+            width: auto;
+            margin-bottom: 5px;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background-color: #1976d2;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #2196f3;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 8px;
+            max-width: 900px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .car-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .car-item {
+            text-align: center;
+            flex: 1 1 250px;
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .car-item img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .car-item h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #1976d2;
+        }
+
+        .price {
+            font-size: 16px;
+            color: #42a5f5;
+            margin-top: 5px;
+        }
+
+        .reserve-btn {
+            margin-top: 10px;
+            background-color: #42a5f5;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .reserve-btn:hover {
+            background-color: #64b5f6;
+        }
+
+        .reviews {
+            margin-top: 30px;
+        }
+
+        .review-item {
+            background-color: #f5f5f5;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        form input, form textarea, form button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        form button {
+            background-color: #1976d2;
+            color: white;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #2196f3;
+        }
+
+        footer {
+            background-color: #1565c0;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .car-gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://via.placeholder.com/150x60?text=Лого" alt="Лого">
+        <h1>Коли под наем</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Начало</a>
+        <a href="#about">За нас</a>
+        <a href="#services">Нашите услуги</a>
+        <a href="#cars">Нашите автомобили</a>
+        <a href="#contact">Контакти</a>
+    </nav>
+
+    <div class="container">
+        <section id="home">
+            <h2>Добре дошли!</h2>
+            <p>Това е началната страница на нашия уебсайт за коли под наем. Изберете страница отгоре, за да разгледате повече информация!</p>
+        </section>
+
+        <section id="about">
+            <h2>За нас</h2>
+            <p>Ние сме водеща компания за коли под наем с дългогодишен опит в предоставянето на качествени автомобили на достъпни цени. Нашата мисия е да осигурим комфортно и безопасно пътуване за всеки наш клиент.</p>
+        </section>
+
+        <section id="services">
+            <h2>Нашите услуги</h2>
+            <p>Предлагаме дългосрочен и краткосрочен наем, доставка на автомобил до адрес, пълна застраховка и 24/7 поддръжка на пътя.</p>
+        </section>
+
+        <section id="cars">
+            <h2>Нашите автомобили</h2>
+            <div class="car-gallery">
+                <div class="car-item">
+                    <img src="https://via.placeholder.com/250x150?text=Автомобил+1" alt="Автомобил 1">
+                    <h3>Луксозен автомобил</h3>
+                    <p class="price">100 лв/ден</p>
+                    <button class="reserve-btn">Резервирай</button>
+                </div>
+                <div class="car-item">
+                    <img src="https://via.placeholder.com/250x150?text=Автомобил+2" alt="Автомобил 2">
+                    <h3>Семейно возило</h3>
+                    <p class="price">60 лв/ден</p>
+                    <button class="reserve-btn">Резервирай</button>
+                </div>
+                <div class="car-item">
+                    <img src="https://via.placeholder.com/250x150?text=Автомобил+3" alt="Автомобил 3">
+                    <h3>Спортен автомобил</h3>
+                    <p class="price">150 лв/ден</p>
+                    <button class="reserve-btn">Резервирай</button>
+                </div>
+                <div class="car-item">
+                    <img src="https://via.placeholder.com/250x150?text=Автомобил+4" alt="Автомобил 4">
+                    <h3>Економичен автомобил</h3>
+                    <p class="price">40 лв/ден</p>
+                    <button class="reserve-btn">Резервирай</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews">
+            <h2>Отзиви от клиенти</h2>
+            <div class="review-item">
+                <p><strong>Иван Петров:</strong> "Отлично обслужване и супер автомобили. Ще ползвам пак!"</p>
+            </div>
+            <div class="review-item">
+                <p><strong>Мария Георгиева:</strong> "Много удобен процес на резервация и автомобили в перфектно състояние."</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Контакти</h2>
+            <form>
+                <input type="text" placeholder="Вашето име">
+                <input type="email" placeholder="Вашият имейл">
+                <textarea placeholder="Вашето съобщение"></textarea>
+                <button type="submit">Изпрати</button>
+            </form>
+        </section>
+
+        <div id="map"></div>
+
+    </div>
+
+    <footer>
+        © 2025 Коли под наем | Всички права запазени.
+    </footer>
+
+    <script>
+        function initMap() {
+            var location = {lat: 42.6977, lng: 23.3219}; // София
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: 'Нашият офис'
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+
+</body>
+</html>
